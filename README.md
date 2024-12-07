@@ -32,11 +32,17 @@ Data statistics of the dataset are shown in the below table:
 
 ## Pipeline-GraphCodeBERT
 
+### Amd-Rocm
+
+setup guide: https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html#using-wheels-package
+
+torch-2.5.1+rocm: https://download.pytorch.org/whl/torch/
+
 ### Dependency
 
-- pip install torch
-- pip install transformers
-- pip install tree_sitter
+- pip install torch==2.5.1+rocm6.2 pytorch-triton-rocm==3.1.0
+- pip install transformers==4.47.0
+- pip install tree_sitter==0.19.0
 
 ### Tree-sitter (optional)
 
@@ -140,3 +146,6 @@ C# to Java:
 | Roborta (code) |   71.99   |    57.9    |
 | CodeBERT       |   72.14   |    58.0    |
 | GraphCodeBERT  | **72.64** |  **58.8**  |
+
+### [Inference on small Hello World sample](inference-helloworld)
+
